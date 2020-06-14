@@ -37,8 +37,15 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 ### Minimum pre-requisites
 
-1. SSH - `Add-WindowsCapability -Online -Name OpenSSH.Client*`
-2. Git - `scoop install git`
+1. SSH - Since April 2018 Windows 10 ships with ssh, but if yours doesn't, here's a powershell command to install it:
+
+        Add-WindowsCapability -Online -Name OpenSSH.Client*
+
+2. Git
+
+        scoop install git-with-openssh
+        [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+
 
 ### Code editors and IDEs
 
