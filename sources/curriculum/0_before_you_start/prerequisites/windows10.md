@@ -63,7 +63,7 @@ The default `cmd` and Powershell terminals in Windows are quite old. Fortunately
 ## Step 4. Set Python 3.7 as the default Python
 
 1. Open *System Properties* by pressing *Windows+R* and typing `sysdm.cpl`
-2. Go to *Advanced* -> *Environment Variables* and in *System variables* double click to `Path`
+2. Go to *Advanced* -> *Environment Variables* and in *System variables* double click on `Path`.
 3. In the *Edit environment variable* window, click *New* and paste
 
         C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64
@@ -71,8 +71,13 @@ The default `cmd` and Powershell terminals in Windows are quite old. Fortunately
 4. Repeat step 3 but paste
 
         C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts
+    
+7. Repeat step 3 but paste
+
+        %APPDATA%\Python\Python37\Scripts
 
     Press OK to confirm. You may want to logout and login again if the next step doesn't work.
+
 
 5. To see if it worked open a Terminal and type
 
@@ -81,10 +86,6 @@ The default `cmd` and Powershell terminals in Windows are quite old. Fortunately
 6. Update `pip` and create your user packages folder by running
 
         python -m pip install --user -U pip
-
-7. Now back in the *Environment Variables* window, in *User variables for `-username-`* double click to `Path` and add:
-
-        C:\Users\-username-\AppData\Roaming\Python\Python37\Scripts
 
 Awesome!
 
